@@ -1,0 +1,115 @@
+let contentGrid = document.getElementById('grid');
+
+let imagesJSON = [
+  {
+    "title": "Garry",
+    "illustration": "Garry.png",
+    "date": "2020.4.7"
+  },
+  {
+    "title": "Roses",
+    "illustration": "redOneColor.png",
+    "date": "2020.4.4"
+  },
+  {
+    "title": "too late (Oui Oui Fan art)",
+    "illustration": "tooLateOuiOui.png",
+    "date":"2020.4.2"
+  },
+  {
+    "title": "May Alter",
+    "illustration": "MayAlter.png",
+    "date": "2020.3.24"
+  },
+  {
+    "title": "Angel Ganev 'Draw this in your Style' Week 27",
+    "illustration": "angeldtiysweek27.png",
+    "date": "2020.3.21"
+  },
+  {
+    "title": "Miu Iruma (Danganronpa v3 Fanart)",
+    "illustration": "miuIruma.png",
+    "date": "2020.3.15"
+  },
+  {
+    "title": "Sage (Valorant Fanart)",
+    "illustration": "sage.png",
+    "date": "2020.3.12"
+  },
+  {
+    "title": "Destructive Love Concept Art I",
+    "illustration": "standardDestructiveLove.png",
+    "date": "2020.3.3"
+  },
+  {
+    "title": "Leo Yanagi",
+    "illustration": "LeoYanagi.png",
+    "date": "2020.2.24"
+  },
+  {
+    "title": "Ayumu Himura",
+    "illustration": "AyumuHimura.png",
+    "date": "2020.2.24"
+  },
+  {
+    "title": "Scarlett Akiyama",
+    "illustration": "ScarlettAkiyama.png",
+    "date": "2020.2.24"
+  },
+  {
+    "title": "R.I.P Qinniart",
+    "illustration": "qinniFull.png",
+    "date": "2020.2.14"
+  }
+];
+
+function createElement(json){
+
+  /// Create whole content item div and set class
+  let newContentElement = document.createElement("DIV");
+  newContentElement.classList.add('content');
+
+  /// Create HEADLINE h3, set class, set content
+  let newContentTitle = document.createElement("H3");
+  newContentTitle.classList.add('title');
+  newContentTitle.innerHTML = json['title'];
+  /// Add the HEADLINE to the item
+  newContentElement.appendChild(newContentTitle);
+
+  /// Create HEADLINE h3, set class, set content
+
+  /// Create & add footer image
+  let newImage = document.createElement("IMG");
+  newImage.classList.add('image');
+  newImage.src = json['illustration'];
+  newContentElement.appendChild(newImage);
+
+  let newDate = document.createElement("H4");
+  newDate.classList.add('date');
+  newDate.innerHTML = json['date'];
+  /// Add the HEADLINE to the item
+  newContentElement.appendChild(newDate);
+
+  // let hr = document.createElement("HR")
+  // newContentElement.appendChild(hr)
+
+  /// Add the item to the page
+  contentGrid.appendChild(newContentElement);
+}
+
+
+for (var i = 0; i < imagesJSON.length; i++) {
+  createElement(imagesJSON[i]);
+}
+
+var im = document.getElementsByClassName("image");
+console.log(im[0]);
+
+for (var i=0; i < im.length; i++){
+  console.log("uwu");
+  // console.log(im[i]);
+  im[i].addEventListener("click", function(){
+    console.log(im[i]);
+    // im[i].style.height = "auto";
+  });
+}
