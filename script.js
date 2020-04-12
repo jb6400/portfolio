@@ -37,7 +37,7 @@ let imagesJSON = [
     "date": "2020.3.12"
   },
   {
-    "title": "Destructive Love Concept Art I",
+    "title": "'Destructive Love Concept' Art I",
     "illustration": "standardDestructiveLove.png",
     "date": "2020.3.3"
   },
