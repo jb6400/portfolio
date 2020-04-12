@@ -2,7 +2,7 @@ let contentGrid = document.getElementById('grid');
 
 let imagesJSON = [
   {
-    "title": "Garry",
+    "title": "Garry (Ib Fanart)",
     "illustration": "Garry.png",
     "date": "2020.4.7"
   },
@@ -12,7 +12,7 @@ let imagesJSON = [
     "date": "2020.4.4"
   },
   {
-    "title": "too late (Oui Oui Fan art)",
+    "title": "too late (Oui Oui Fanart)",
     "illustration": "tooLateOuiOui.png",
     "date":"2020.4.2"
   },
@@ -105,10 +105,18 @@ for (var i = 0; i < imagesJSON.length; i++) {
   createElement(imagesJSON[i]);
 }
 
-for (var i = 0; i < imagesJSON.length; i++) {
+function listener(){
   var listenID = "image" + (i+1);
-  document.getElementById(listenID).addEventListener("click", function(){
+  document.getElementById(listenID).addEventListener("mouseover", function(){
     document.getElementById(listenID).style.height = "auto";
-    console.log(listenID);
+    // console.log(listenID);
   });
+  document.getElementById(listenID).addEventListener("mouseout", function(){
+    document.getElementById(listenID).style.height = "100px";
+    // console.log(listenID);
+  });
+}
+
+for (var i=0; i < imagesJSON.length; i++){
+  listener();
 }

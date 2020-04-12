@@ -3,7 +3,7 @@
 body {
   margin: 5vw 10vw 0px 10vw;
   padding: 0px;
-  background-color: #151436;
+  background-image: url("bg.png");
   color: #ffbae5;
   font-family: 'Baloo Tamma 2', cursive;
   font-weight: 300;
@@ -12,6 +12,8 @@ body {
 
 * {
   box-sizing: border-box;
+  transition-duration: 1s;
+  /* transition-delay: 2s; */
 }
 
 h3 {
@@ -35,19 +37,19 @@ h1{
 #grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1vmin;
+  grid-column-gap: 5vmin;
   grid-row-gap: 5vmin;
   padding: 2vmin;
   font-size: 1.5rem;
 }
 
 .content {
-  padding: 1vmin;
-  /* background-color: #4d4c73;
-  border:solid; */
+  /* padding: 0.5vmin; */
+  background-color: #4d4c73;
+  /* border:solid; */
   display: grid;
   grid-column-end: span 3;
-  /* border-radius: 20vmin; */
+  border-radius: 15px;
 }
 
 .image {
@@ -58,5 +60,4 @@ h1{
 }
 
 /* .image:hover{
-  height: auto;
 } */
