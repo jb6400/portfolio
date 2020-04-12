@@ -80,7 +80,8 @@ function createElement(json){
 
   /// Create & add footer image
   let newImage = document.createElement("IMG");
-  newImage.classList.add('image');
+  newImage.classList.add("image");
+  newImage.id = currID;
   newImage.src = json['illustration'];
   newContentElement.appendChild(newImage);
 
@@ -99,17 +100,14 @@ function createElement(json){
 
 
 for (var i = 0; i < imagesJSON.length; i++) {
+  var currID = "image" + (i+1);
   createElement(imagesJSON[i]);
 }
 
-var im = document.getElementsByClassName("image");
-console.log(im[0]);
-
-for (var i=0; i < im.length; i++){
-  console.log("uwu");
-  // console.log(im[i]);
-  im[i].addEventListener("click", function(){
-    console.log(im[i]);
-    // im[i].style.height = "auto";
+for (var i = 0; i < imagesJSON.length; i++) {
+  var listenID = "image" + (i+1);
+  var im = document.getElementById("listenID")
+  im.addEventListener("click", function(){
+    im.style.height = "auto";
   });
 }
