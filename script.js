@@ -82,6 +82,7 @@ function createElement(json){
   let newImage = document.createElement("IMG");
   newImage.classList.add("image");
   newImage.id = currID;
+  // console.log(currID);
   newImage.src = json['illustration'];
   newContentElement.appendChild(newImage);
 
@@ -106,8 +107,8 @@ for (var i = 0; i < imagesJSON.length; i++) {
 
 for (var i = 0; i < imagesJSON.length; i++) {
   var listenID = "image" + (i+1);
-  var im = document.getElementById("listenID")
-  im.addEventListener("click", function(){
-    im.style.height = "auto";
+  document.getElementById(listenID).addEventListener("click", function(){
+    document.getElementById(listenID).style.height = "auto";
+    console.log(listenID);
   });
 }
