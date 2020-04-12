@@ -6,6 +6,8 @@ body {
   background-image: url("bg.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   color: #fff3a1;
   font-family: 'Baloo Tamma 2', cursive;
   font-weight: 300;
